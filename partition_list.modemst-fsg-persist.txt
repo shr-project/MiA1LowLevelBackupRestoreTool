@@ -1,0 +1,5 @@
+# Only modemst*, fsg, persist partitions
+modemst1
+modemst2
+fsg
+persist

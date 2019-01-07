@@ -1,0 +1,3 @@
+# Only modemst* partitions
+modemst1
+modemst2
