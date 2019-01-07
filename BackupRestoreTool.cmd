@@ -220,10 +220,10 @@ IF "!CHOICE_BACKUPPATH!"=="" (
 	PAUSE>NUL
 	CD /D !CHOICE_BACKUPPATH!
 	ECHO "%THISPATH%\bin\emmcdl.exe" -p %CONFIG_COMPORT% -f "%THISPATH%\%CONFIG_LOADER%" -x "!CD!\rawprogram0.xml" -MaxPayloadSizeToTargetInBytes %CONFIG_SPEED%
-	"%THISPATH%\bin\emmcdl.exe" -p %CONFIG_COMPORT% -f "%THISPATH%\%CONFIG_LOADER%" -x "!CD!\rawprogram0.xml" -MaxPayloadSizeToTargetInBytes %CONFIG_SPEED%
+	"%THISPATH%\bin\emmcdl.exe" -p %CONFIG_COMPORT% -f "%THISPATH%\%CONFIG_LOADER%" -x "!CD!\rawprogram0.xml" -MaxPayloadSizeToTargetInBytes %CONFIG_SPEED% >> "%THISPATH%\log.txt" & type "%THISPATH%\log.txt"
 	CD /D "%THISPATH%"
 	ECHO.
-	ECHO [i] All done^^!
+	ECHO [i] All done^^! >> "%THISPATH%\log.txt" & type "%THISPATH%\log.txt"
 )
 GOTO :EOF
 
